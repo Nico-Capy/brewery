@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Capy';
+  src: url('./assets/Capy-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
