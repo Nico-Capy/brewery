@@ -14,8 +14,8 @@ import {
   DrawerBody,
   Stack,
 } from "@chakra-ui/react";
+import { useNavigate } from 'react-router-dom';
 import { HamburgerIcon } from "@chakra-ui/icons";
-import CapyFontFace from './CapyFont'
 
 const Navbar = () => {
   const [isLargerThanMd] = useMediaQuery("(min-width: 768px)");
@@ -49,18 +49,6 @@ const Navbar = () => {
         borderRadius="md"
         _hover={{ bg: "gray.100" }}
       >
-        {item.icon && (
-          <Box
-            as="span"
-            mr={2}
-            aria-hidden="true"
-            display="inline-flex"
-            fontSize="xl"
-            alignItems="center"
-          >
-            {item.icon}
-          </Box>
-        )}
         {item.label}
       </Box>
     );
@@ -69,49 +57,45 @@ const Navbar = () => {
   return (
     <>
       <Flex
-        as="nav"
-        align="center"
-        justify="space-between"
-        wrap="wrap"
-        bg="gray.100"
-        px={4}
-        py={2}
-        borderBottom="1px"
-        borderColor="gray.200"
-      >
-        <Flex align="center" mr={5}>
-          <IconButton
-            aria-label="Open sidebar"
-            size="md"
-            icon={<HamburgerIcon />}
-            display={isLargerThanMd ? "none" : "block"}
-            onClick={onOpen}
-          />
-          <Box display={isLargerThanMd ? "block" : "none"}>
-            <Box as="a" href="/" fontFamily='Capy' fontSize="2xl" fontWeight="bold" color="gray.800">
-              Not A Brewery
-            </Box>
-          </Box>
-        </Flex>
+  as="nav"
+  align="center"
+  justify="space-between"
+  wrap="wrap"
+  bg="gray.100"
+  px={4}
+  py={2}
+  borderBottom="1px"
+  borderColor="gray.200"
+>
+  <Flex align="center">
+    <Box display={isLargerThanMd ? "block" : "none"}>
+      <Box as="a" href="/" fontFamily='Capy' fontSize="2xl" fontWeight="bold" color="gray.800">
+        Not A Brewery
+      </Box>
+    </Box>
+  </Flex>
 
-        {isLargerThanMd && (
-          <Box>
-            <Stack direction="row" spacing={4}>
-              {navItems.map((item) => (
-                <NavItem key={item.id} item={item} />
-              ))}
-            </Stack>
-          </Box>
-        )}
+  {isLargerThanMd ? (
+    <Box>
+      <Stack direction="row" spacing={4}>
+        {navItems.map((item) => (
+          <NavItem key={item.id} item={item} />
+        ))}
+      </Stack>
+    </Box>
+  ) : (
+    <IconButton
+      aria-label="Open sidebar"
+      size="md"
+      icon={<HamburgerIcon />}
+      onClick={onOpen}
+      mr={2}
+    />
+  )}
+</Flex>
 
-        <Spacer />
 
-        <Box display={{ base: "none", md: "block" }}>
-          
-        </Box>
-      </Flex>
-    
-      <Drawer placement="left" isOpen={isOpen} onClose={onClose} size="xs">
+      <Drawer placement="bottom" isOpen={isOpen} onClose={onClose} size="xs">
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
@@ -126,7 +110,7 @@ const Navbar = () => {
         </DrawerContent>
       </Drawer>
     </>
-);
+  );
 };
 
 export default Navbar;
