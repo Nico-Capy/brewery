@@ -31,6 +31,12 @@ const Navbar = () => {
     { id: "contact", label: "Contact" },
   ];
 
+  const navigate = useNavigate();
+
+  const navigateToAbout = () => {
+    navigate("/about");
+  };
+
   const handleNavItemOnClick = (id: string) => {
     setActiveNavItem(id);
   };
