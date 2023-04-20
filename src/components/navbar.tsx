@@ -101,20 +101,21 @@ const Navbar = () => {
 </Flex>
 
 
-      <Drawer placement="bottom" isOpen={isOpen} onClose={onClose} size="xs">
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>Menu</DrawerHeader>
-          <DrawerBody>
-            <Stack spacing={4}>
-              {navItems.map((item) => (
-                <NavItem key={item.id} item={item} />
-              ))}
-            </Stack>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
+<Drawer placement="bottom" isOpen={isOpen} onClose={onClose} size="xs">
+  <DrawerOverlay />
+  <DrawerContent>
+    <DrawerCloseButton />
+    <DrawerHeader>Menu</DrawerHeader>
+    <DrawerBody>
+      <Stack spacing={4}>
+        {navItems.map((item) => (
+          <NavItem key={item.id} item={item} />
+        ))}
+      </Stack>
+    </DrawerBody>
+  </DrawerContent>
+</Drawer>
+
     </>
   );
 };

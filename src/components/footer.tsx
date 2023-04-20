@@ -2,16 +2,19 @@ import { Box, Flex, Link, Text } from '@chakra-ui/react';
 import { FaBeer } from 'react-icons/fa';
 
 const Footer = () => {
-  return (
-    <Box as="footer" borderTop="1px solid" borderColor="blue.200" py={8} mb="0">
-      <Flex justify="center">
-        <Link href="/" mr={4}>
-          <FaBeer />
-        </Link>
-        <Text>Nicola Corradini, Not a brewery &copy; {new Date().getFullYear()}, Nicola Corradini</Text>
-      </Flex>
-    </Box>
-  );
+const handleBeerClick = () => {
+window.location.href = "https://www.youtube.com/watch?v=KPlYOA8UMrs";
 };
 
+return (
+<Box as="footer" py={8} mb="0">
+<Flex justify="center" alignItems="center" h="1rem" w="100%">
+<Link href="/" mr={6} onClick={handleBeerClick}>
+<FaBeer color="green" />
+</Link>
+<Text>Not a brewery | © {new Date().getFullYear()}, Nicola Corradini</Text>
+</Flex>
+</Box>
+);
+};
 export default Footer;

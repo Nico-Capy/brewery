@@ -1,59 +1,97 @@
-import React from 'react';
-import {
-  Box,
-  Center,
-  Text,
-  Flex,
-  Image,
-  useBreakpointValue,
-  Position,
-} from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react';
+import { Flex, Image, Text, useBreakpointValue } from '@chakra-ui/react';
+import nicoImage from '../assets/nico.jpg';
+import nicoUn from '../assets/nico1.jpeg';
+import nicoDeux from '../assets/nico2.jpg';
 
-const About: React.FC = () => {
-  const imageWidth = useBreakpointValue({
-    base: "32%",
-    sm: "16%",
-    md: "16%",
-    lg: "32%",
-    xl: "32%",
-  });
-  const imagePosition = useBreakpointValue({
-    base: "initial",
-    sm: "initial",
-    md: "initial",
-    lg: "relative",
-    xl: "relative",
-  } as Record<string, Position | undefined>);
-  const textMargin = useBreakpointValue({ base: "4", lg: "6" });
+const AboutPage: React.FC = () => {
+  const isImageOnLeft = useBreakpointValue({ base: false, lg: true });
+  const [image, setImage] = useState(nicoImage);
+  const [shadowX, setShadowX] = useState(0);
+  const [shadowY, setShadowY] = useState(0);
+
+  const handleClick = () => {
+    if (image === nicoImage) {
+      setImage(nicoUn);
+    } else if (image === nicoUn) {
+      setImage(nicoDeux);
+    } else {
+      setImage(nicoImage);
+    }
+  };
+
+  const handleMouseMove = (e: MouseEvent) => {
+    const { left, top, width, height } = document.querySelector('img')!.getBoundingClientRect();
+    const mouseX = e.clientX - left;
+    const mouseY = e.clientY - top;
+    const shadowX = (mouseX / width) * 20 - 10;
+    const shadowY = (mouseY / height) * 20 - 10;
+    setShadowX(shadowX);
+    setShadowY(shadowY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   return (
-    <>
-    <Center>
-      <Box fontFamily='Capy' fontSize="6xl">About</Box>
-    </Center>
-
-    <Center>
+    <Flex
+      w="100%"
+      h="80vh"
+      p="2"
+      overflow="auto"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <Flex
+        flexDir={isImageOnLeft ? 'row' : 'column'}
+        alignItems="center"
+        justifyContent="center"
+        mx="auto"
+        my='auto'
+        maxW="76rem"
+        h='100%'
+      >
         <Image
-          borderRadius='full'
-          src='../src/assets/nico.jpg'
-          alt='Nico, the Master Brewer'
-          width={imageWidth}
-          height={imageWidth}
-          position={imagePosition}
-          m="3"
+          src={image}
+          alt={
+            image === nicoImage
+              ? 'Nico, the Master Brewer, after a few beers'
+              : image === nicoUn
+              ? 'Nico, Master Brewer, thinking about beer'
+              : 'Nico, Master Brewer, at an axe throwing bar'
+          }
+          boxSize={isImageOnLeft ? 'sm' : '2xs'}
+          objectFit="cover"
+          borderRadius="full"
+          border="px"
+          onClick={handleClick}
+          onMouseMove={handleMouseMove}
+          mr={isImageOnLeft ? '4' : '0'}
+          mt={isImageOnLeft ? '6' : '4'}
+          boxShadow={`${shadowX}px ${shadowY}px 1px rgba(0, 0, 0, 0.1)`}
         />
-    </Center>
-    
-        <Text fontSize="md" textAlign="justify" m="6" mb="0" mt="3">
+        <Text
+          textAlign="justify"
+          fontSize="md"
+          m="10"
+          mt={isImageOnLeft ? '6' : '10'}
+          mb={isImageOnLeft ? '6' : '10'}
+        >
           Hey, I'm Nico.
           <br />
-          I like beer. I like it so much, I started making it myself. Why call my brewery "Not A Brewery"? Well, I'm still only doing this for fun.
+          <br />
+          I like beer. I like it so much, I started making it myself. Why call my brewery "Not A Brewery"? Well, I'm still only doing this for fun. As a friend once said, "Nico, I'd see you go to jail for selling alcohol during the prohibition". Spot on!
           <br />
           <br />
           As long as I'm having fun, why not make a website for my brewery? So here we are! Feel free to roam around, take a look at the beers I make, leave a comment, look at the more creative projects I'm doing, … You can even send me ideas! You never know when I'll run out of weird stuff to do. The weird idea to beat: a bacon and maple syrup beer.
         </Text>
-    </>
+      </Flex>
+    </Flex>
   );
 };
 
-export default About;
+export default AboutPage;
