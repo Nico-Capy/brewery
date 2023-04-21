@@ -3,7 +3,6 @@ import {
   Box,
   Flex,
   IconButton,
-  Spacer,
   useDisclosure,
   useMediaQuery,
   Drawer,
@@ -75,8 +74,8 @@ const Navbar = () => {
 >
   <Flex align="center">
     <Box display={isLargerThanMd ? "block" : "none"}>
-      <Box as="a" href="/" fontFamily='Capy' fontSize="2xl" fontWeight="bold" color="gray.800">
-        Not A Brewery
+      <Box as="a" href="/" fontFamily='Capy' fontSize="2xl" fontWeight="bold" color="gray.800" ml='1rem'>
+        Brewbellion
       </Box>
     </Box>
   </Flex>

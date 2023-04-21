@@ -1,14 +1,12 @@
-import { Button, Center, Flex, Text, Box } from "@chakra-ui/react";
+import { Center, Flex, Box, Text, CloseButton } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import CapyFontFace from "../CapyFont";
-import { ArrowForwardIcon, CloseIcon } from "@chakra-ui/icons";
-import { useNavigate } from 'react-router-dom';
+import DiscoverButton from "../components/discoverbutton";
 
 function Home() {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsActive(true), 3200);
+    const timer = setTimeout(() => setIsActive(true), 2300);
     return () => clearTimeout(timer);
   }, []);
 
@@ -20,34 +18,25 @@ function Home() {
         <h2>Welcome to</h2>
       </Center>
 
-      <CapyFontFace>
-        <Center
-          fontSize="8xl"
-          bg="transparent"
-          w="100%"
-          p={4}
-          fontFamily="Capy"
-        >
-          <h1>Not A Brewery</h1>
-        </Center>
-      </CapyFontFace>
-
-      <br />
-
-      <Center>
-        <Button rightIcon={<ArrowForwardIcon />} fontFamily="Capy" fontSize="3xl">
-          <Text>Discover</Text>
-        </Button>
+      <Center fontSize="8xl" bg="transparent" w="100%" p={4} fontFamily="Capy">
+        <h1>
+          Brewbellion
+        </h1>
       </Center>
+
+      <DiscoverButton />
 
       {isActive && (
         <Box
           position="fixed"
           bottom="0"
-          left="0"
-          right="0"
+          fontSize="xl"
+          left="50%"
+          transform="translateX(-50%)"
+          maxW="60%"
           p={4}
-          bg="gray.100"
+          bg="blue.500"
+          borderRadius="md"
           display="flex"
           alignItems="center"
           justifyContent="space-between"
@@ -60,10 +49,10 @@ function Home() {
             },
           }}
         >
-          <Text fontFamily="Capy" textAlign="center" lineHeight="1.5">
-            This website doesn't give you cookies. We might give you a side of peanuts with your beer though
+          <Text fontFamily="Capy" color="white">
+            Come to the light side. We don't have cookies, but we have peanuts with our beers.
           </Text>
-          <CloseIcon cursor="pointer" onClick={handleClose} />
+          <CloseButton color="white" onClick={handleClose} />
         </Box>
       )}
     </Flex>

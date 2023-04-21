@@ -5,6 +5,22 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Typewriter';
+  src: url('./assets/AmericanTypewriter.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes crawl-in {
+  from {
+    transform: translateY(100%) translateX(0);
+  }
+  to {
+    transform: translateY(0%) translateX(0);
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
