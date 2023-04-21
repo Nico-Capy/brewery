@@ -14,6 +14,10 @@ function DiscoverButton() {
           boxShadow="0 0 16px rgba(0, 0, 0, 0.2)"
           animation="pulse 2.3s ease-in-out infinite"
           transformOrigin="center"
+          _hover={{ 
+            bg: "red.600", 
+            boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.5)" 
+          }}
           sx={{
             '@keyframes pulse': {
               '0%': {

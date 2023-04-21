@@ -1,5 +1,8 @@
 import { Center, Flex, Box, Text, CloseButton } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRebel } from "@fortawesome/free-brands-svg-icons";
+
 import DiscoverButton from "../components/discoverbutton";
 
 function Home() {
@@ -18,7 +21,14 @@ function Home() {
         <h2>Welcome to</h2>
       </Center>
 
-      <Center fontSize="8xl" bg="transparent" w="100%" p={4} fontFamily="Capy">
+      <a href="https://www.youtube.com/watch?v=bWXazVhlyxQ" target="_blank" rel="noopener noreferrer">
+        <FontAwesomeIcon
+          icon={faRebel}
+          style={{ color: "#3182ce", height: "16vh", paddingTop: "3rem", paddingBottom: "0rem" }}
+        />
+      </a>
+
+      <Center fontSize="8xl" bg="transparent" w="100%" p={4} fontFamily="Capy" color='blue.500' textShadow="0px 5px 6px rgba(0, 0, 0, 0.25)">
         <h1>
           Brewbellion
         </h1>
