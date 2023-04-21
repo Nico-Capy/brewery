@@ -20,22 +20,22 @@ const AboutPage: React.FC = () => {
     }
   };
 
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = (event: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
     const { left, top, width, height } = document.querySelector('img')!.getBoundingClientRect();
-    const mouseX = e.clientX - left;
-    const mouseY = e.clientY - top;
-    const shadowX = (mouseX / width) * 20 - 10;
-    const shadowY = (mouseY / height) * 20 - 10;
+    const mouseX = event.clientX - left;
+    const mouseY = event.clientY - top;
+    const shadowX = (mouseX / width) * 10 - 5;
+    const shadowY = (mouseY / height) * 10 - 5;
     setShadowX(shadowX);
     setShadowY(shadowY);
-  };
+  };  
 
   useEffect(() => {
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove as unknown as EventListener);
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMove as unknown as EventListener);
     };
-  }, []);
+  }, []);  
 
   return (
     <Flex
@@ -67,12 +67,12 @@ const AboutPage: React.FC = () => {
           boxSize={isImageOnLeft ? 'sm' : '2xs'}
           objectFit="cover"
           borderRadius="full"
-          border="px"
+          border="0px"
           onClick={handleClick}
           onMouseMove={handleMouseMove}
           mr={isImageOnLeft ? '4' : '0'}
           mt={isImageOnLeft ? '6' : '4'}
-          boxShadow={`${shadowX}px ${shadowY}px 1px rgba(0, 0, 0, 0.1)`}
+          boxShadow={`${shadowX}px ${shadowY}px 1rem rgba(0, 0, 0, 0.2)`}
         />
         <Text
           textAlign="justify"
