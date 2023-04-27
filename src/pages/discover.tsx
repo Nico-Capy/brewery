@@ -19,17 +19,42 @@ function Discover() {
     borderRadius: "1rem",
     h: { base: "90vh", sm: "72vh", md: "72vh", lg: "80vh", xl: "80vh" },
     w: { base: "90vw", sm: "90vw", md: "90vw", lg: "26vw", xl: "26vw" },
-    position: { base: "static", md: "relative" }, // <-- changed type
+    position: { base: "static", md: "relative" } as Partial<Record<string, Position>>,
     overflow: "hidden",
-    transition: "filter 0.5s ease",
+    transition: "opacity 0.5s ease",
     _hover: {
-      filter: "blur(4px)",
       "&::before": {
+        content: `"Capy details"`,
+        display: "block",
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        color: "white",
+        fontSize: "2xl",
+        fontWeight: "bold",
+        zIndex: "1",
+      },
+      "&::after": {
         content: '""',
-        display: "none",
+        position: "absolute",
+        top: "0",
+        left: "0",
+        right: "0",
+        bottom: "0",
+        backgroundColor: "rgba(0,0,0,0.5)",
+        zIndex: "0",
+        opacity: "0",
+        transition: "opacity 0.5s ease",
+      },
+      opacity: "1",
+    },
+    _hoverAfter: {
+      "&::after": {
+        opacity: "1",
       },
     },
-  };  
+  };   
 
   return (
     <Box>
@@ -40,7 +65,7 @@ function Discover() {
       </Center>
       <Center>
         <Flex flexDirection={{ base: "column", lg: "row", xl: "row" }}>
-          <Box {...boxStyle}>
+        <Box {...boxStyle} sx={{ "&:hover": boxStyle._hoverAfter }}>
             <Center>
               <Text fontFamily="Capy" fontSize="4xl" color="white" textAlign="center" p='1rem'>
                 <h1>Capy</h1>
@@ -75,7 +100,8 @@ function Discover() {
               </Flex>
             </Text>
           </Box>
-          <Box {...boxStyle}>
+
+          <Box {...boxStyle} sx={{ "&:hover": boxStyle._hoverAfter }}>
             <Center>
               <Text fontFamily="Capy" fontSize="4xl" color="white" textAlign="center" p='1rem'>
                 <h1>Chilly Pepper</h1>
@@ -110,7 +136,8 @@ function Discover() {
               </Flex>
             </Text>
           </Box>
-          <Box {...boxStyle}>
+
+          <Box {...boxStyle} sx={{ "&:hover": boxStyle._hoverAfter }}>
             <Center>
               <Text fontFamily="Capy" fontSize="4xl" color="white" textAlign="center" p='1rem'>
                 <h1>Coffee</h1>
@@ -149,7 +176,7 @@ function Discover() {
       </Center>
       <Center>
         <Flex flexDirection={{ base: "column", lg: "row", xl: "row" }}>
-        <Box {...boxStyle}>
+        <Box {...boxStyle} sx={{ "&:hover": boxStyle._hoverAfter }}>
             <Center>
               <Text fontFamily="Capy" fontSize="4xl" color="white" textAlign="center" p='1rem'>
                 <h1>Sake</h1>
@@ -184,7 +211,8 @@ function Discover() {
               </Flex>
             </Text>
           </Box>
-          <Box {...boxStyle}>
+
+          <Box {...boxStyle} sx={{ "&:hover": boxStyle._hoverAfter }}>
             <Center>
               <Text fontFamily="Capy" fontSize="4xl" color="white" textAlign="center" p='1rem'>
                 <h1>Mjolnbeer</h1>

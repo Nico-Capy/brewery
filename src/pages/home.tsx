@@ -17,7 +17,7 @@ function Home() {
 
   return (
     <Flex direction="column" minHeight="83vh" alignItems="center" justifyContent="center">
-      <Center fontSize="3xl" bg="transparent" w="100%" p={2}>
+      <Center fontSize="3xl" bg="transparent" w="100%" p={2} fontFamily="American Typewriter">
         <h2>Welcome to</h2>
       </Center>
 
@@ -43,7 +43,7 @@ function Home() {
           fontSize="xl"
           left="50%"
           transform="translateX(-50%)"
-          maxW="60%"
+          maxW="80%"
           p={4}
           bg="blue.500"
           borderRadius="md"
@@ -60,7 +60,7 @@ function Home() {
           }}
         >
           <Text fontFamily="Capy" color="white">
-            Come to the light side. We don't have cookies, but we have peanuts with our beers.
+            Come to the light side. We don't have cookies, but we serve peanuts with our beers.
           </Text>
           <CloseButton color="white" onClick={handleClose} />
         </Box>
