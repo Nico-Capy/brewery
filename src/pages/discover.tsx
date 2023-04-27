@@ -2,6 +2,7 @@ import { Badge, Box, Center, Flex, Text } from "@chakra-ui/react";
 import capyImage from '../assets/triangleformation.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 function Discover() {
   const breakpoints = {
@@ -10,6 +11,14 @@ function Discover() {
     lg: '62em',
     xl: '80em',
   };
+
+  const [beerText, setBeerText] = useState({
+    capy: "The 'Capy' was the second beer recipe that I created and brewed myself.",
+    chillyPepper: "Chilly Pepper details",
+    coffeeStout: 'This is a coffee beer',
+    sakeBeer: "Experimental beer",
+    mjolnBeer: 'Viking ale',
+  });
 
   const boxStyle = {
     m: "6",
@@ -21,10 +30,10 @@ function Discover() {
     w: { base: "90vw", sm: "90vw", md: "90vw", lg: "26vw", xl: "26vw" },
     position: { base: "static", md: "relative" } as Partial<Record<string, Position>>,
     overflow: "hidden",
-    transition: "opacity 0.5s ease",
+    transition: "opacity 0.6s ease",
     _hover: {
       "&::before": {
-        content: `"Capy details"`,
+        content: `""`,
         display: "block",
         position: "absolute",
         top: "50%",
@@ -50,11 +59,18 @@ function Discover() {
       opacity: "1",
     },
     _hoverAfter: {
+      "&::before": {
+        content: `"${beerText.capy}"`,
+        content: `"${beerText.chillyPepper}"`,
+        content: `"${beerText.chillyPepper}"`,
+        content: `"${beerText.chillyPepper}"`,
+        content: `"${beerText.chillyPepper}"`,
+      },
       "&::after": {
         opacity: "1",
       },
     },
-  };   
+  };
 
   return (
     <Box>
