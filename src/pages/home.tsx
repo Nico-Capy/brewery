@@ -1,7 +1,5 @@
-import { Center, Flex, Box, Text, CloseButton } from "@chakra-ui/react";
+import { Center, Flex, Box, Text, CloseButton, Image } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRebel } from "@fortawesome/free-brands-svg-icons";
 
 import DiscoverButton from "../components/discoverbutton";
 
@@ -21,17 +19,18 @@ function Home() {
         <h2>Welcome to</h2>
       </Center>
 
-      <a href="https://www.youtube.com/watch?v=bWXazVhlyxQ" target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon
-          icon={faRebel}
-          style={{ color: "#3182ce", height: "16vh", paddingTop: "3rem", paddingBottom: "0rem" }}
-        />
-      </a>
+      <Image src="/NicoBrewCo.svg" alt="Brewbellion Logo" maxH="32vh" pt="3rem" pb="0rem" />
 
-      <Center fontSize="8xl" bg="transparent" w="100%" p={4} fontFamily="Capy" color='blue.500' textShadow="0px 5px 6px rgba(0, 0, 0, 0.25)">
+      <Center fontSize="8xl" bg="transparent" w="100%" p='2' pb="0" fontFamily="Capy" color='blue.500' textShadow="0px 5px 6px rgba(0, 0, 0, 0.25)">
         <h1>
-          Brewbellion
+          Nico Brew Co.
         </h1>
+      </Center>
+
+      <Center fontSize="4xl" bg="transparent" w="100%" p="2" pt='0' fontFamily="Capy" color='blue.500' textShadow="0px 5px 6px rgba(0, 0, 0, 0.25)">
+        <p>
+          Where your beers come true
+        </p>
       </Center>
 
       <DiscoverButton />
@@ -43,9 +42,9 @@ function Home() {
           fontSize="xl"
           left="50%"
           transform="translateX(-50%)"
-          maxW="80%"
+          maxW="90%"
           p={4}
-          bg="blue.500"
+          bg="red.600"
           borderRadius="md"
           display="flex"
           alignItems="center"

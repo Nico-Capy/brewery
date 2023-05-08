@@ -13,9 +13,8 @@ import {
   DrawerBody,
   Stack,
 } from "@chakra-ui/react";
-import { useNavigate } from 'react-router-dom';
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isLargerThanMd] = useMediaQuery("(min-width: 768px)");
@@ -43,7 +42,6 @@ const Navbar = () => {
       <NavLink
         to={item.to}
         onClick={() => handleNavItemOnClick(item.id)}
-        fontWeight={isActive ? "semibold" : "normal"}
         color={isActive ? "blue.500" : "inherit"}
         bg={isActive ? "blue.50" : "transparent"}
         px={3}
