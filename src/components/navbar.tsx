@@ -39,20 +39,23 @@ const Navbar = () => {
   const NavItem = ({ item }: { item: typeof navItems[0] }) => {
     const isActive = activeNavItem === item.id;
     return (
-      <NavLink
-        to={item.to}
-        onClick={() => handleNavItemOnClick(item.id)}
-        color={isActive ? "blue.500" : "inherit"}
+      <Box
         bg={isActive ? "blue.50" : "transparent"}
         px={3}
         py={2}
         borderRadius="md"
-        _hover={{ bg: "gray.100" }}
+        _hover={{ bg: "blue.100" }}
       >
-        {item.label}
-      </NavLink>
+        <NavLink
+          to={item.to}
+          onClick={() => handleNavItemOnClick(item.id)}
+          color={isActive ? "blue.500" : "inherit"}
+        >
+          {item.label}
+        </NavLink>
+      </Box>
     );
-  };
+  };  
 
   return (
     <>
@@ -65,7 +68,7 @@ const Navbar = () => {
         px={4}
         py={2}
         borderBottom="1px"
-        borderColor="gray.200"
+        borderColor="blue.200"
       >
         <Flex align="center">
           <Box display={isLargerThanMd ? "block" : "none"}>
@@ -78,7 +81,7 @@ const Navbar = () => {
               color="gray.800"
               ml="1rem"
             >
-              Brewbellion
+              Nico Brew Co.
             </Box>
           </Box>
         </Flex>
