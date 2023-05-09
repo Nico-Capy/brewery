@@ -26,7 +26,7 @@ const Navbar = () => {
     { id: "discover", label: "Discover", to: "/discover" },
     { id: "about", label: "About", to: "/about" },
     { id: "projects", label: "Projects", to: "/projects" },
-    { id: "community", label: "Community and ideas", to: "/community" },
+    // { id: "community", label: "Community and ideas", to: "/community" },
     { id: "contact", label: "Contact", to: "/contact" },
   ];
 
