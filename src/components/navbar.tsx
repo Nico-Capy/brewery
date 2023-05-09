@@ -66,7 +66,8 @@ const Navbar = () => {
         wrap="wrap"
         bg="gray.100"
         px={4}
-        py={2}
+        pt={2}
+        pb="2"
         borderBottom="1px"
         borderColor="blue.200"
       >
@@ -75,9 +76,8 @@ const Navbar = () => {
             <Box
               as="a"
               href="/"
-              fontFamily="Capy"
+              fontFamily="American Typewriter"
               fontSize="2xl"
-              fontWeight="bold"
               color="gray.800"
               ml="1rem"
             >
