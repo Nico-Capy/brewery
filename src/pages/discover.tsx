@@ -47,7 +47,7 @@ function Discover() {
                 <Box>
                   <FontAwesomeIcon icon={faStar} color="white" />
                 </Box>
-                <Box m='0' mt='0' boxShadow="2xl" backgroundColor='black' borderRadius="1rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' _hover={{ opacity:"0.6" }} display="flex" justifyContent="center" alignItems="center" >
+                <Box m='0' mt='0' boxShadow="2xl" backgroundColor='black' borderRadius="1rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "0.6", transition: "opacity 1.6s" }}>
                   <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
                     This is the second beer recipe that I created and brewed myself. The recipe was a much bigger success than anticipated, so I kept brewing and perfecting it. Why is it called "Capy"? The first time I had people tried it, it was with friends from my scouts unit. We were at a post-camp barbecue, and I brought a few bottles. The scouts loved it and they started calling it "Capy", from my totem "Capybara". Since I hadn't named the beer yet, that stayed.
                   </Text>
@@ -91,7 +91,7 @@ function Discover() {
                 </Box>
               </Flex>
             </Text>
-            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='black' borderRadius="1rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' _hover={{ opacity:"0.6" }} display="flex" justifyContent="center" alignItems="center" >
+            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='black' borderRadius="1rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "0.6", transition: "opacity 1.6s" }}>
               <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
                 This one is made with a Norwegian kveik yeast. Word on the street is, the vikings used it to brew the beer they drank at funerals. Fermenting a beer at high temperatures (between 30 an 40°C instead of the usual room temperature), that made the beer ferment in three days instead of the average two weeks. The beer would be ready for the funeral ceremony.
               </Text>
@@ -176,7 +176,7 @@ function Discover() {
                 <Box>
                   <FontAwesomeIcon icon={faStar} color="white" />
                 </Box>
-                <Box m='0' mt='0' boxShadow="2xl" backgroundColor='black' borderRadius="1rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' _hover={{ opacity:"0.6" }} display="flex" justifyContent="center" alignItems="center" >
+                <Box m='0' mt='0' boxShadow="2xl" backgroundColor='black' borderRadius="1rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "0.6", transition: "opacity 1.6s" }}>
                   <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
                     I had fun with this one. After having brewed a couple of times, I got a little bored. While I was looking through the ingredients I needed to buy for my other beers, I found a sake yeast. One thing led to another, I was making my own sake that I fermented with my own beer. The result? A unique umami beer.
                   </Text>
@@ -259,7 +259,7 @@ function Discover() {
                 </Box>
               </Flex>
             </Text>
-            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='black' borderRadius="1rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' _hover={{ opacity:"0.6" }} display="flex" justifyContent="center" alignItems="center" >
+            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='black' borderRadius="1rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "0.6", transition: "opacity 1.6s" }}>
               <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
                 Having a pilsner in your selection of beers is always a good idea. Except it's a little annoying to make; it has to ferment at cooler temperatures than an ale, so you need a lot of equipment, and it can get quite expensive. California had a brilliant solution for that: the California Common style yeast. The warm weather made it hard for the Californian brewers to 
               </Text>

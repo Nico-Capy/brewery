@@ -59,7 +59,7 @@ function Home() {
           }}
         >
           <Text fontFamily="Capy" color="white">
-            Come to the light side. We don't have cookies, but we serve peanuts with our beers.
+            We don't give you cookies, but we serve peanuts with our beers.
           </Text>
           <CloseButton color="white" onClick={handleClose} />
         </Box>
