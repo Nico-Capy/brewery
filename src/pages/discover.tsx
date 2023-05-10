@@ -1,5 +1,5 @@
 import { Box, Center, Flex, Text } from "@chakra-ui/react";
-import capyImage from '../assets/triangleformation.jpg'
+import capyImage from '/triangleformation.jpg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 

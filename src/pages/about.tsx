@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Flex, Image, Text, useBreakpointValue } from '@chakra-ui/react';
-import nicoImage from '../assets/nico.jpg';
-import nicoUn from '../assets/nico1.jpeg';
-import nicoDeux from '../assets/nico2.jpg';
+import nicoImage from '/nico.jpg';
+import nicoUn from '/nico1.jpeg';
+import nicoDeux from '/nico2.jpg';
 
 const AboutPage: React.FC = () => {
   const isImageOnLeft = useBreakpointValue({ base: false, lg: true });

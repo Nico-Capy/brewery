@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button, Center, Heading, Text } from '@chakra-ui/react';
 import '../App.css';
 
