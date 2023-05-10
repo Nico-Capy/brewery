@@ -66,6 +66,7 @@ const Navbar = () => {
         justify="space-between"
         wrap="wrap"
         bg="gray.100"
+        fontFamily="American Typewriter"
         px={4}
         pt={2}
         pb="2"
@@ -75,7 +76,6 @@ const Navbar = () => {
             <Box
               as="a"
               href="/"
-              fontFamily="American Typewriter"
               fontSize="2xl"
               color="gray.800"
               ml="1rem"

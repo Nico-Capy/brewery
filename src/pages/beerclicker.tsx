@@ -20,7 +20,7 @@ function Clicker() {
   return (
     <Center h="100vh">
       <div>
-        <Heading as="h1" size="4xl" mb="4">
+        <Heading as="h1" size="4xl" mb="4" fontFamily="American Typewriter">
           Beer Clicker
         </Heading>
         <Button
