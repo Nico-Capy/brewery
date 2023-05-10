@@ -4,9 +4,10 @@ import { Box, Button, Center, Flex, Image, Text } from '@chakra-ui/react';
 function Clicker() {
   const [beerCount, setBeerCount] = useState(0);
   const [highScore, setHighScore] = useState(0);
+  const [chosenDrink, setChosenDrink] = useState('');
 
   const handleBeerClick = (points: number) => {
-    setBeerCount(beerCount + points);
+    setBeerCount((prevBeerCount) => prevBeerCount + points);
   };
 
   const handleResetClick = () => {
@@ -14,46 +15,75 @@ function Clicker() {
   };
 
   useEffect(() => {
-    const minDelay = 3000;
-    const maxDelay = 15000;
-    const delay = Math.floor(Math.random() * (maxDelay - minDelay + 1) + minDelay);
-    const timerId = setTimeout(() => {
-      const drinkTypes = [
-        { name: 'vodka', points: 10 },
-        { name: 'wine', points: 15 },
-        { name: 'rhum', points: 20 },
-        { name: 'water', points: -5 },
-      ];
-      const drink = drinkTypes[Math.floor(Math.random() * drinkTypes.length)];
-      const x = Math.floor(Math.random() * 300) + 100;
-      const y = Math.floor(Math.random() * 300) + 100;
-      const image = document.createElement('img');
-      image.setAttribute('src', '/mysterydrink.svg');
-      image.setAttribute('alt', 'Mystery Drink');
-      image.setAttribute('style', `position: absolute; top: ${y}px; left: ${x}px; cursor: pointer;`);
-      image.addEventListener('click', () => handleBeerClick(drink.points));
-      document.body.appendChild(image);
-      setTimeout(() => {
-        document.body.removeChild(image);
-      }, 6000);
-      const message = `You got a ${drink.name}!`;
-      const notification = document.createElement('div');
-      notification.setAttribute('style', 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 8px; background-color: white; border-radius: 0px; font-family: sans-serif; z-index: 1;');
-      notification.innerText = message;
-      document.body.appendChild(notification);
-      setTimeout(() => {
-        document.body.removeChild(notification);
-      }, 5000);
-    }, delay);
-    return () => {
-      clearTimeout(timerId);
-    };
-  }, [beerCount]);
+    const mysteryDrinkInterval = setInterval(() => {
+      setChosenDrink('/mysterydrink.svg');
+    }, 6100);
 
+    return () => clearInterval(mysteryDrinkInterval);
+  }, []);
 
   useEffect(() => {
-    const minDelay = 1642; // minimum delay
-    const maxDelay = 160000; // maximum delay
+    const notificationTimeout = 2316;
+    const notificationBgColor = '#3164bc';
+    const notificationTextColor = 'white';
+    const notificationFontFamily = 'American Typewriter';
+
+    const handleDrinkClick = (drink: string, points: number) => {
+      setChosenDrink('');
+      if (drink === 'water') {
+        setBeerCount((prevBeerCount) => Math.max(0, prevBeerCount - points));
+      } else {
+        setBeerCount((prevBeerCount) => prevBeerCount + points);
+      }
+
+      const message = `You drank ${drink}, ${drink === 'water' ? 'removed' : 'added'} ${points} beers!`;
+      const notification = document.createElement('div');
+      notification.style.position = 'fixed';
+      notification.style.top = '50%';
+      notification.style.left = '50%';
+      notification.style.transform = 'translate(-50%, -50%)';
+      notification.style.background = notificationBgColor;
+      notification.style.color = notificationTextColor;
+      notification.style.fontFamily = notificationFontFamily;
+      notification.style.padding = '1rem 2rem';
+      notification.style.borderRadius = '0rem';
+      notification.innerText = message;
+      document.body.appendChild(notification);
+
+      setTimeout(() => {
+        document.body.removeChild(notification);
+      }, notificationTimeout);
+    };
+
+    const mysteryDrinkTimeout = setTimeout(() => {
+      setChosenDrink('');
+    }, 3200);
+
+    if (chosenDrink !== '') {
+      const drinks = ['vodka', 'wine', 'rum', 'water'];
+      const points = chosenDrink === 'water' ? -10 : chosenDrink === 'vodka' ? 15 : chosenDrink === 'wine' ? 20 : 30;
+      const randomDrinkIndex = Math.floor(Math.random() * drinks.length);
+      const randomDrink = drinks[randomDrinkIndex];
+      const image = document.createElement('img');
+      image.setAttribute('src', chosenDrink);
+      image.setAttribute('alt', 'Mystery Drink');
+      image.setAttribute('style', `position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: pointer;`);
+      image.addEventListener('click', () => handleDrinkClick(randomDrink, points));
+      document.body.appendChild(image);
+
+      setTimeout(() => {
+        document.body.removeChild(image);
+      }, notificationTimeout);
+    }
+
+    return () => {
+      clearTimeout(mysteryDrinkTimeout);
+    };
+  }, [chosenDrink]);
+
+  useEffect(() => {
+    const minDelay = 1600; // minimum delay
+    const maxDelay = 2600; // maximum delay
     const showMessageDelay = Math.floor(Math.random() * (maxDelay - minDelay + 1) + minDelay); // delay to show message in milliseconds
     const showMessageTimerId = setTimeout(() => {
       const points = Math.floor(Math.random() * 21) + 6; // points to subtract (between 6 and 26)
@@ -67,7 +97,7 @@ function Clicker() {
   }, [beerCount]);
 
   useEffect(() => {
-    const minDelay = 26000;
+    const minDelay = 2600;
     const maxDelay = 42000;
     const delay = Math.floor(Math.random() * (maxDelay - minDelay + 1) + minDelay);
     const timerId = setTimeout(() => {
@@ -147,3 +177,18 @@ function Clicker() {
 }
 
 export default Clicker;
+function setMysteryDrinkType(arg0: string) {
+    throw new Error('Function not implemented.');
+}
+
+function setMysteryDrinkPoints(points: number) {
+    throw new Error('Function not implemented.');
+}
+
+function setMysteryDrinkVisible(arg0: boolean) {
+    throw new Error('Function not implemented.');
+}
+
+function handleMysteryDrinkClick(this: HTMLImageElement, ev: MouseEvent) {
+    throw new Error('Function not implemented.');
+}
