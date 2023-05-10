@@ -4,7 +4,7 @@ import { lazy, Suspense } from 'react';
 const Home = lazy(() => import('../src/pages/home'));
 const About = lazy(() => import('../src/pages/about'));
 const Contact = lazy(() => import('../src/pages/contact'));
-const BeerClicker = lazy(() => import('../src/pages/beerclicker'));
+const Clicker = lazy(() => import('../src/pages/beerclicker'));
 
 const Routes = () => {
   return (
@@ -20,7 +20,7 @@ const Routes = () => {
           <Contact />
         </Route>
         <Route path="/clicker">
-          <BeerClicker />
+          <Clicker />
         </Route>
       </RouterRoutes>
     </Suspense>

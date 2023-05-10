@@ -9,7 +9,7 @@ const Footer = () => {
   }
 
   return (
-    <Box as="footer" py='8' mb="0">
+    <Box as="footer" py='8' mb="0" fontFamily="American Typewriter">
       <Flex justify="center" alignItems="center" h="1rem" w="100%">
         <Link href="/" mr={6} onClick={handleLogoClick} target="_blank" rel="noopener noreferrer">
           <FaRebel color="green" />

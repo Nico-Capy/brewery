@@ -1,63 +1,72 @@
-import { useState } from 'react';
-import { Button, Center, Heading, Text } from '@chakra-ui/react';
-import '../App.css';
+import React, { useState } from 'react';
+import { Box, Button, Center, Flex, Image, Text } from '@chakra-ui/react';
 
 function Clicker() {
-  const [beers, setBeers] = useState<number>(0);
-  const [beerValue, setBeerValue] = useState<number>(1);
+  const [beerCount, setBeerCount] = useState(0);
+  const [highScore, setHighScore] = useState(0);
 
-  const handleClick = () => {
-    setBeers(beers + beerValue);
+  const handleBeerClick = () => {
+    setBeerCount(beerCount + 1);
   };
 
-  const handleUpgrade = () => {
-    if (beers >= 10) {
-      setBeers(beers - 10);
-      setBeerValue(beerValue + 1);
-    }
+  const handleResetClick = () => {
+    setBeerCount(0);
   };
+
+  if (beerCount > highScore) {
+    setHighScore(beerCount);
+  }
 
   return (
-    <Center h="100vh">
-      <div>
-        <Heading as="h1" size="4xl" mb="4" fontFamily="American Typewriter">
-          Beer Clicker
-        </Heading>
+    <Flex flexDirection='column' align="center" justify="center">
+      <Text fontFamily="American Typewriter" fontSize="4xl" mb="4">
+        Beer Clicker
+      </Text>
+      <Text fontFamily="American Typewriter" fontSize="2xl" mb="4">
+        Click the beer to drink it
+      </Text>
+      <Box
+        w="40vh"
+        h="60vh"
+        bg="transparent"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
         <Button
-          bg="yellow.600"
-          _hover={{ bg: 'yellow.600' }}
-          color="white"
-          fontWeight="bold"
-          py="2"
-          px="4"
-          rounded="none"
-          mb="4"
-          onClick={handleClick}
+          onClick={handleBeerClick}
+          backgroundColor='transparent'
+          _hover={{ backgroundColor: "transparent" }}
+          _active={{ backgroundColor: "transparent" }}
+          _focus={{ outline: "none" }}
+          border="none"
+          m={6}
+          p={0}
         >
-          Click me to get beers!
+          <Center h="100%">
+            <Image src='/beerclicker.svg' alt='May the Beer be with you' w="14vh" />
+          </Center>
         </Button>
-        <Text fontSize="xl" mt="4">
-          You have {beers} beers.
-        </Text>
-        <Button
-          bg="blue.500"
-          _hover={{ bg: 'blue.600' }}
-          color="white"
-          fontWeight="bold"
-          py="2"
-          px="4"
-          rounded="md"
-          mt="4"
-          onClick={handleUpgrade}
-          isDisabled={beers < 10}
-        >
-          Upgrade beer value (costs 10 beers)
-        </Button>
-        <Text fontSize="xl" mt="4">
-          Each click earns {beerValue} beers.
-        </Text>
-      </div>
-    </Center>
+      </Box>
+      <Text fontFamily="American Typewriter" fontSize="xl" mt={6}>
+        Beers drank: {beerCount}
+      </Text>
+      <Button
+        onClick={handleResetClick}
+        backgroundColor='transparent'
+        _hover={{ backgroundColor: "transparent" }}
+        _active={{ backgroundColor: "transparent" }}
+        _focus={{ outline: "none" }}
+        border="none"
+        m={6}
+        p={0}
+      >
+        Reset
+      </Button>
+      <Text fontFamily="American Typewriter" fontSize="xl" mt={6}>
+        High Score: {highScore}
+      </Text>
+    </Flex>
   );
 }
 
