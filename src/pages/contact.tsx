@@ -67,7 +67,7 @@ const Contact = () => {
           </FormControl>
           <FormControl id="message" isRequired>
             <FormLabel>Message</FormLabel>
-            <Textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="You get extra credit if the message is a compliment" required pattern=".{1,}" title="Please enter a message" />
+            <Textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="You get extra credit if the message is a compliment" required title="Please enter a message" />
           </FormControl>
           <Button type="submit" colorScheme="blue">
             Send

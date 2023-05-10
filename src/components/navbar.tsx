@@ -26,8 +26,9 @@ const Navbar = () => {
     { id: "discover", label: "Discover", to: "/discover" },
     { id: "about", label: "About", to: "/about" },
     { id: "projects", label: "Projects", to: "/projects" },
-    // { id: "community", label: "Community and ideas", to: "/community" },
+    { id: "clicker", label: "Beer Clicker", to: "/clicker" },
     { id: "contact", label: "Contact", to: "/contact" },
+    // { id: "community", label: "Community and ideas", to: "/community" },
   ];
 
   const navigate = useNavigate();
@@ -68,8 +69,6 @@ const Navbar = () => {
         px={4}
         pt={2}
         pb="2"
-        borderBottom="1px"
-        borderColor="blue.200"
       >
         <Flex align="center">
           <Box display={isLargerThanMd ? "block" : "none"}>
