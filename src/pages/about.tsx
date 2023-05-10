@@ -38,58 +38,24 @@ const AboutPage: React.FC = () => {
   }, []);  
 
   return (
-    <Flex
-      w="100%"
-      h="80vh"
-      p="2"
-      overflow="auto"
-      alignItems="center"
-      justifyContent="center"
-    >
-      <Flex
-        flexDir={isImageOnLeft ? 'row' : 'column'}
-        alignItems="center"
-        justifyContent="center"
-        mx="auto"
-        my='auto'
-        maxW="76rem"
-        h='100%'
-      >
-        <Image
-          src={image}
-          alt={
-            image === nicoImage
-              ? 'Nico, the Master Brewer, after a few beers'
-              : image === nicoUn
-              ? 'Nico, Master Brewer, thinking about beer'
-              : 'Nico, Master Brewer, at an axe throwing bar'
-          }
-          boxSize={isImageOnLeft ? 'sm' : '2xs'}
-          objectFit="cover"
-          borderRadius="full"
-          border="0px"
-          onClick={handleClick}
-          onMouseMove={handleMouseMove}
-          mr={isImageOnLeft ? '4' : '0'}
-          mt={isImageOnLeft ? '6' : '4'}
-          boxShadow={`${shadowX}px ${shadowY}px 1rem rgba(0, 0, 0, 0.2)`}
-        />
-        <Text
-          textAlign="justify"
-          fontSize="md"
-          m="10"
-          mt={isImageOnLeft ? '6' : '10'}
-          mb={isImageOnLeft ? '6' : '10'}
-        >
+    <Flex w="100%" h="80vh" p="2" overflow="auto" alignItems="center" justifyContent="center">
+      <Flex flexDirection="column" alignItems="center" justifyContent="center">
+        <Text fontSize="4xl" mb="4" fontFamily="American Typewriter">
+          About
+        </Text>
+      <Flex flexDir={isImageOnLeft ? 'row' : 'column'} alignItems="center" justifyContent="center" mx="auto" my='auto' maxW="76rem" h='100%' >
+        <Image src={image} alt={ image === nicoImage   ? 'Nico, the Master Brewer, after a few beers'   : image === nicoUn   ? 'Nico, Master Brewer, thinking about beer'   : 'Nico, Master Brewer, at an axe throwing bar' } boxSize={isImageOnLeft ? 'sm' : '2xs'} objectFit="cover" borderRadius="full" border="0px" onClick={handleClick} onMouseMove={handleMouseMove} mr={isImageOnLeft ? '4' : '0'} mt={isImageOnLeft ? '6' : '4'} boxShadow={`${shadowX}px ${shadowY}px 1rem rgba(0, 0, 0, 0.2)`} />
+        <Text textAlign="justify" fontSize="xl" m="10" mt={isImageOnLeft ? '6' : '10'} mb={isImageOnLeft ? '6' : '10'} fontFamily="American Typewriter" >
           Hey, I'm Nico.
           <br />
           <br />
-          I like beer. I like it so much, I started making it myself. Why call my brewery "Not A Brewery"? Well, I'm still only doing this for fun. As a friend once said, "Nico, I'd see you go to jail for selling alcohol during the prohibition". Spot on!
+          I like beer. I like it so much, I started making it myself. I'm still only doing this for fun. A friend once said to me: "Nico, I'd see you go to jail for selling alcohol during the prohibition". Spot on!
           <br />
           <br />
           As long as I'm having fun, why not make a website for my brewery? So here we are! Feel free to roam around, take a look at the beers I make, leave a comment, look at the more creative projects I'm doing, … You can even send me ideas! You never know when I'll run out of weird stuff to do. The weird idea to beat: a bacon and maple syrup beer.
         </Text>
       </Flex>
+    </Flex>
     </Flex>
   );
 };
