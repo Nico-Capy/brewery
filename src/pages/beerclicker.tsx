@@ -68,17 +68,9 @@ function Clicker() {
           </Center>
         </Button>
         {isRoundOnTheHouseVisible && (
-          <Button
-            onClick={handleRoundOnTheHouseClick}
-            fontFamily="American Typewriter"
-            fontSize="xl"
-            border="none"
-            bgColor="blue.400"
-            color="black"
-            mt={6}
-          >
-            Round on the house
-          </Button>
+          <Button onClick={handleRoundOnTheHouseClick} fontFamily="American Typewriter" fontSize="lg" border="none" bgColor="green.400" color="white" mt={6} width="100%" borderRadius={0} >
+          Round on the house
+        </Button>
         )}
       </Box>
       <Text fontFamily="American Typewriter" fontSize="xl" mt={6}>
@@ -88,7 +80,7 @@ function Clicker() {
         onClick={handleResetClick}
         backgroundColor='transparent'
         _hover={{ backgroundColor: "transparent" }}
-        _active={{ backgroundColor: "transparent" }}
+        _active={{ backgroundColor: "red.600" }}
         _focus={{ outline: "none" }}
         border="none"
         m={6}
