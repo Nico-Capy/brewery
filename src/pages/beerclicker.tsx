@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Button, Center, Flex, Image, Text } from '@chakra-ui/react';
-import beerImage from '/beerclicker.svg';
 
 function Clicker() {
   const [beerCount, setBeerCount] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [isRoundOnTheHouseVisible, setRoundOnTheHouseVisible] = useState(false);
+  const [beerImage, setBeerImage] = useState<any>(null);
+
+  useEffect(() => {
+    import('/beerclicker.svg').then(image => {
+      setBeerImage(image.default);
+    });
+  }, []);
 
   useEffect(() => {
     let intervalId: number | undefined;
@@ -30,14 +36,14 @@ function Clicker() {
     let intervalId: number | undefined;
     let timeoutId: number | undefined;
     const showButton = () => {
-      const randomTime = Math.floor(Math.random() * (61 - 32 + 1) + 32); // generate random number between 32 and 61
+      const randomTime = Math.floor(Math.random() * (60 - 8 + 1) + 8);
       timeoutId = setTimeout(() => {
         const randomPoints = Math.floor(Math.random() * (42 - 4 + 1) + 4);
         setBeerCount((prevBeerCount) => prevBeerCount - randomPoints);
         const notification = document.createElement("div");
         notification.innerText = `You drank too much, I'm cutting you off! -${randomPoints} beers`;
         notification.style.position = "fixed";
-        notification.style.top = "50%";
+        notification.style.top = "26%";
         notification.style.left = "50%";
         notification.style.transform = "translate(-50%, -50%)";
         notification.style.backgroundColor = "crimson";
@@ -50,14 +56,15 @@ function Clicker() {
         timeoutId = setTimeout(() => {
           document.body.removeChild(notification);
         }, 2300);
-      }, randomTime * 1000); // convert to milliseconds
+      }, 1000 * randomTime);
     };
-    intervalId = setInterval(showButton, 2000);
+    intervalId = setInterval(showButton, 16000);
     return () => {
       clearInterval(intervalId);
       clearTimeout(timeoutId);
     };
-  }, []);  
+  }, []);
+   
 
   const handleBeerClick = (points: number) => {
     setBeerCount((prevBeerCount) => prevBeerCount + points);
@@ -88,7 +95,7 @@ function Clicker() {
       <Box w="40vh" h="60vh" bg="transparent" display="flex" justifyContent="center" alignItems="center">
         <Button onClick={() => handleBeerClick(1)} backgroundColor='transparent' _hover={{ backgroundColor: "transparent" }} _active={{ backgroundColor: "transparent" }} _focus={{ outline: "none" }} border="none" m={6} p={0} >
           <Center h="100%">
-          <Image src={beerImage} alt='May the Beer be with you' w="16vh" />
+            {beerImage && <Image src={beerImage} alt='May the Beer be with you' w="16vh" />}
           </Center>
         </Button>
       </Box>
