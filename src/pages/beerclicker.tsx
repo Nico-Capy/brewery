@@ -210,11 +210,11 @@ function Clicker() {
       clearTimeout(timeoutId);
     };
   }, []);
-  
 
   const handleBeerClick = (points: number) => {
-    setBeerCount((prevBeerCount) => prevBeerCount + points);
-  };
+    const roundedPoints = Math.ceil(points);
+    setBeerCount((prevBeerCount) => prevBeerCount + roundedPoints);
+  };  
 
   const handleResetClick = () => {
     setBeerCount(0);
