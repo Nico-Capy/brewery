@@ -1,17 +1,64 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Button, Center, Flex, Image, Text } from '@chakra-ui/react';
+import { useState, useEffect } from 'react';
+import { AbsoluteCenter, Box, Button, Center, Flex, Image, Text } from '@chakra-ui/react';
 
 function Clicker() {
   const [beerCount, setBeerCount] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [isRoundOnTheHouseVisible, setRoundOnTheHouseVisible] = useState(false);
   const [beerImage, setBeerImage] = useState<any>(null);
+  const [isMysteryDrink, setIsMysteryDrink] = useState(false);
 
   useEffect(() => {
     import('/beerclicker.svg').then(image => {
       setBeerImage(image.default);
     });
   }, []);
+
+  useEffect(() => {
+    let timeoutId: number | undefined;
+    const showButton = () => {
+      setIsMysteryDrink(true);
+      timeoutId = setTimeout(() => {
+        setIsMysteryDrink(false);
+      }, Math.floor(Math.random() * (16000 - 6000 + 1) + 6000));
+    };
+    timeoutId = setTimeout(showButton, Math.floor(Math.random() * (16000 - 6000 + 1) + 6000));
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);  
+
+  const handleMysteryDrinkClick = () => {
+    setIsMysteryDrink(false);
+    const drinks = [
+      { name: "Water", points: -18 },
+      { name: "Energy Drink", points: -51 },
+      { name: "Coffee", points: -23 },
+      { name: "Wine", points: 17 },
+      { name: "Vodka", points: 26 },
+      { name: "Rum", points: 49 },
+      { name: "Gin", points: 21 },
+    ];
+    const randomDrink = drinks[Math.floor(Math.random() * drinks.length)];
+    const drinkPoints = randomDrink.points;
+    handleBeerClick(drinkPoints);
+    const notification = document.createElement("div");
+    notification.innerText = `You got ${randomDrink.name}, ${drinkPoints > 0 ? "adding" : "removing"} ${drinkPoints} beers`;
+    notification.style.position = "fixed";
+    notification.style.top = "26%";
+    notification.style.left = "50%";
+    notification.style.transform = "translate(-50%, -50%)";
+    notification.style.backgroundColor = "green";
+    notification.style.color = "white";
+    notification.style.fontFamily = "American Typewriter";
+    notification.style.fontSize = "1rem";
+    notification.style.padding = "0.5rem";
+    notification.style.borderRadius = "0rem";
+    document.body.appendChild(notification);
+    setTimeout(() => {
+      document.body.removeChild(notification);
+    }, 2300);
+  };
 
   useEffect(() => {
     let intervalId: number | undefined;
@@ -36,7 +83,7 @@ function Clicker() {
     let intervalId: number | undefined;
     let timeoutId: number | undefined;
     const showButton = () => {
-      const randomTime = Math.floor(Math.random() * (60 - 8 + 1) + 8);
+      const randomTime = Math.floor(Math.random() * (90 - 32 + 1) + 32);
       timeoutId = setTimeout(() => {
         const randomPoints = Math.floor(Math.random() * (42 - 4 + 1) + 4);
         setBeerCount((prevBeerCount) => prevBeerCount - randomPoints);
@@ -58,13 +105,112 @@ function Clicker() {
         }, 2300);
       }, 1000 * randomTime);
     };
+    intervalId = setInterval(showButton, 96000 + Math.floor(Math.random() * 32100));
+    return () => {
+      clearInterval(intervalId);
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
+  useEffect(() => {
+    let intervalId: number | undefined;
+    let timeoutId: number | undefined;
+    const showButton = () => {
+      const randomTime = Math.floor(Math.random() * (61 - 32 + 1) + 32);
+      timeoutId = setTimeout(() => {
+        const pointsToRemove = 212;
+        setBeerCount((prevBeerCount) => prevBeerCount - pointsToRemove);
+        const notification = document.createElement("div");
+        notification.innerText = `Your parents walk in, you have to sober up! -${pointsToRemove} beers`;
+        notification.style.position = "fixed";
+        notification.style.top = "26%";
+        notification.style.left = "50%";
+        notification.style.transform = "translate(-50%, -50%)";
+        notification.style.backgroundColor = "crimson";
+        notification.style.color = "white";
+        notification.style.fontFamily = "American Typewriter";
+        notification.style.fontSize = "1rem";
+        notification.style.padding = "0.5rem";
+        notification.style.borderRadius = "0rem";
+        document.body.appendChild(notification);
+        timeoutId = setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 2300);
+      }, Math.floor(Math.random() * (96 - 60 + 1) + 60) * 1000);
+    };
+    intervalId = setInterval(showButton, Math.floor(Math.random() * (96 - 60 + 1) + 60) * 1000);
+    return () => {
+      clearInterval(intervalId);
+      clearTimeout(timeoutId);
+    };
+  }, []);  
+
+  useEffect(() => {
+    let intervalId: number | undefined;
+    let timeoutId: number | undefined;
+    const showButton = () => {
+      const randomTime = Math.floor(Math.random() * (61 - 32 + 1) + 32);
+      timeoutId = setTimeout(() => {
+        const randomPoints = Math.floor(Math.random() * (60 - 4 + 1) + 4);
+        setBeerCount((prevBeerCount) => prevBeerCount + randomPoints);
+        const notification = document.createElement("div");
+        notification.innerText = `This round is on the house! + ${randomPoints} beers`;
+        notification.style.position = "fixed";
+        notification.style.top = "26%";
+        notification.style.left = "50%";
+        notification.style.transform = "translate(-50%, -50%)";
+        notification.style.backgroundColor = "green";
+        notification.style.color = "white";
+        notification.style.fontFamily = "American Typewriter";
+        notification.style.fontSize = "1rem";
+        notification.style.padding = "0.5rem";
+        notification.style.borderRadius = "0rem";
+        document.body.appendChild(notification);
+        timeoutId = setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 2300);
+      }, 1000 * randomTime);
+    };
     intervalId = setInterval(showButton, 16000);
     return () => {
       clearInterval(intervalId);
       clearTimeout(timeoutId);
     };
   }, []);
-   
+
+  useEffect(() => {
+    let intervalId: number | undefined;
+    let timeoutId: number | undefined;
+    const showButton = () => {
+      const randomTime = Math.floor(Math.random() * (90 - 32 + 1) + 32);
+      timeoutId = setTimeout(() => {
+        const randomPoints = Math.floor(Math.random() * (42 - 4 + 1) + 4);
+        setBeerCount((prevBeerCount) => prevBeerCount / 2); // Divide by 2
+        const notification = document.createElement("div");
+        notification.innerText = `You passed out! -${randomPoints} beers`;
+        notification.style.position = "fixed";
+        notification.style.top = "26%";
+        notification.style.left = "50%";
+        notification.style.transform = "translate(-50%, -50%)";
+        notification.style.backgroundColor = "crimson";
+        notification.style.color = "white";
+        notification.style.fontFamily = "American Typewriter";
+        notification.style.fontSize = "1rem";
+        notification.style.padding = "0.5rem";
+        notification.style.borderRadius = "0rem";
+        document.body.appendChild(notification);
+        timeoutId = setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 2300);
+      }, 1000 * randomTime);
+    };
+    intervalId = setInterval(showButton, 180000);
+    return () => {
+      clearInterval(intervalId);
+      clearTimeout(timeoutId);
+    };
+  }, []);
+  
 
   const handleBeerClick = (points: number) => {
     setBeerCount((prevBeerCount) => prevBeerCount + points);
@@ -77,12 +223,6 @@ function Clicker() {
   if (beerCount > highScore) {
     setHighScore(beerCount);
   }
-
-  const handleRoundOnTheHouseClick = () => {
-    const randomPoints = Math.floor(Math.random() * (42 - 6 + 1) + 6); // generate random points between 6 and 42
-    handleBeerClick(randomPoints);
-    setRoundOnTheHouseVisible(false); // hide the "Round on the house" button
-  };
 
   return (
     <Flex flexDirection='column' align="center" justify="center">
@@ -99,10 +239,10 @@ function Clicker() {
           </Center>
         </Button>
       </Box>
-      {isRoundOnTheHouseVisible && (
-        <Button onClick={handleRoundOnTheHouseClick} fontFamily="American Typewriter" fontSize="lg" border="none" bgColor="green.400" color="white" mt={6} width="32vh" borderRadius={0} position="absolute" left={`${Math.floor(Math.random() * 70) + 15}%`} top={`${Math.floor(Math.random() * 70) + 15}%`}>
-          Round on the house
-        </Button>        
+      {isMysteryDrink && (
+        <Button onClick={handleMysteryDrinkClick} fontFamily="American Typewriter" fontSize="lg" border="none" bgColor="yellow.400" color="white" mt={6} width="32vh" borderRadius={0} position={'absolute'} left="60%" top="60%">
+          Mystery Drink
+        </Button>
       )}
       <Text fontFamily="American Typewriter" fontSize="xl" mt={6}>
         Beers drank: {beerCount}
