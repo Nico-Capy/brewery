@@ -222,7 +222,7 @@ function Discover() {
             </Text>
             <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }}>
               <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
-                Coffee beer is the first beer I brewed 
+                Coffee beer is the first beer I brewed with in mind the idea of making a beer to pair with some food. For this one, I went for a beer you could have with dessert. I chose some malt that had npotes of chocolate and coffee. Then I went to the market where I usually buy my coffee, and went for a coffee that also had notes of chocolate.
               </Text>
             </Box>
           </Box>
