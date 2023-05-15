@@ -26,7 +26,6 @@ const Navbar = () => {
     { id: "discover", label: "Discover", to: "/discover" },
     { id: "about", label: "About", to: "/about" },
     { id: "projects", label: "Projects", to: "/projects" },
-    { id: "clicker", label: "Beer Clicker", to: "/clicker" },
     { id: "contact", label: "Contact", to: "/contact" },
     // { id: "community", label: "Community and ideas", to: "/community" },
   ];

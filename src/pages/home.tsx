@@ -36,7 +36,7 @@ function Home() {
       <DiscoverButton />
 
       {isActive && (
-        <Box position="fixed" bottom="0" fontSize="xl" left="50%" transform="translateX(-50%)" maxW="90%" p={4} bg="red.600" borderRadius="none" display="flex" alignItems="center" justifyContent="space-between" opacity={0} animation="fadeIn 1.6s ease-in forwards"
+        <Box position="fixed" bottom="0" fontSize="xl" left="50%" transform="translateX(-50%)" maxW="90%" p={4} bg="blue.600" borderRadius="none" display="flex" alignItems="center" justifyContent="space-between" opacity={0} animation="fadeIn 1.6s ease-in forwards"
           sx={{
             "@keyframes fadeIn": {
               from: { opacity: 0 },

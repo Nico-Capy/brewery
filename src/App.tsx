@@ -6,7 +6,6 @@ import Contact from './pages/contact';
 import Footer from './components/footer';
 import { Box } from '@chakra-ui/react';
 import Discover from './pages/discover';
-import Clicker from './pages/beerclicker';
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
             <Route path="/About" element={<AboutPage />} />
             <Route path="/Discover" element={<Discover />} />
             <Route path="/Contact" element={<Contact />} />
-            <Route path="/Clicker" element={<Clicker />} />
             {/*<Route path="/Projects" element={<Projects />} />
             <Route path="/CommIdea" element={<CommIdea />} />*/}
           </Routes>
