@@ -1,6 +1,6 @@
-# Not A Brewery
+# Nico Brew Co.
 
-## Not A Brewery? What is that?
+## Nico Brew Co.? What is that?
 
 Well, it is a brewery. But not a real one. It's my home brewery. I am making beer, but not in a I'm selling it to bars and stuff, you get it. I guess it's as real as you want it to be 🤷🏼‍♂️
 
