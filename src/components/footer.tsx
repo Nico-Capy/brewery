@@ -9,12 +9,12 @@ const Footer = () => {
   }
 
   return (
-    <Box as="footer" py='8' mb="0" fontFamily="American Typewriter" backgroundColor='transparent'>
+    <Box as="footer" py='2' mb="0" fontFamily="American Typewriter" backgroundColor="blue.300" boxShadow='inner'>
       <Flex justify="center" alignItems="center" h="1rem" w="100%">
-        <Link href="/" mr={6} onClick={handleLogoClick} target="_blank" rel="noopener noreferrer">
-          <FaRebel color="green" />
+        <Link href="/" mr={2} onClick={handleLogoClick} target="_blank" rel="noopener noreferrer">
+          <FaRebel color="white" />
         </Link>
-        <Text>© {new Date().getFullYear()}, Nicola Corradini | Nico Brew Co.</Text>
+        <Text color="white">© {new Date().getFullYear()}, Nicola Corradini | Nico Brew Co.</Text>
       </Flex>
     </Box>
   );

@@ -5,7 +5,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 function Discover() {
   return (
-    <Box backgroundColor="orange.200">
+    <Box backgroundColor="blue.300">
       <Center>
       <Text fontFamily="American Typewriter" fontSize="5xl" p='1rem' textColor='white'>
         <h1>Discover</h1>
@@ -17,7 +17,7 @@ function Discover() {
         <Box>
         <Box m='6' mt='0' boxShadow="2xl" backgroundColor='red.600' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative'>
             <Center>
-              <Text fontFamily="American Typewriter" fontSize="3xl" color="white" textAlign="center" p='1rem'>
+              <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Capy</h1>
                 <Box p="1rem">
                   <img src={capyImage} alt="Capy Beer" />
@@ -60,7 +60,7 @@ function Discover() {
           <Box>
           <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
-              <Text fontFamily="American Typewriter" fontSize="3xl" color="white" textAlign="center" p='1rem'>
+              <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Mjolnbeer</h1>
                 <Box p="1rem">
                   <img src={capyImage} alt="Capy Beer" />
@@ -102,7 +102,7 @@ function Discover() {
           <Box>
           <Box m='6' mt='0' boxShadow="2xl" backgroundColor='orange.600' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
-              <Text fontFamily="American Typewriter" fontSize="3xl" color="white" textAlign="center" p='1rem'>
+              <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Chili Pepper</h1>
                 <Box p="1rem">
                   <img src={capyImage} alt="Capy Beer" />
@@ -146,7 +146,7 @@ function Discover() {
         <Box>
         <Box m='6' mt='0' boxShadow="2xl" backgroundColor='yellow.400' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
-              <Text fontFamily="American Typewriter" fontSize="3xl" color="white" textAlign="center" p='1rem'>
+              <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Sake</h1>
                 <Box p="1rem">
                   <img src={capyImage} alt="Capy Beer" />
@@ -189,7 +189,7 @@ function Discover() {
           <Box>
           <Box m='6' mt='0' boxShadow="2xl" backgroundColor='purple.400' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
-              <Text fontFamily="American Typewriter" fontSize="3xl" color="white" textAlign="center" p='1rem'>
+              <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Coffee</h1>
                 <Box p="1rem">
                   <img src={capyImage} alt="Capy Beer" />
@@ -231,8 +231,8 @@ function Discover() {
           <Box>
           <Box m='6' mt='0' boxShadow="2xl" backgroundColor='green.600' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
-              <Text fontFamily="American Typewriter" fontSize="3xl" color="white" textAlign="center" p='1rem'>
-                <h1>Lizard King</h1>
+              <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
+                <h1>The Beer of the People</h1>
                 <Box p="1rem">
                   <img src={capyImage} alt="Capy Beer" />
                 </Box>

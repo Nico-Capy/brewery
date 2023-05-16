@@ -1,18 +1,5 @@
 import { useState } from "react";
-import {
-  Box,
-  Flex,
-  IconButton,
-  useDisclosure,
-  useMediaQuery,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  DrawerHeader,
-  DrawerBody,
-  Stack,
-} from "@chakra-ui/react";
+import { Box, Flex, IconButton, useDisclosure, useMediaQuery, Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader, DrawerBody, Stack, } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -25,8 +12,8 @@ const Navbar = () => {
     { id: "home", label: "Home", to: "/" },
     { id: "discover", label: "Discover", to: "/discover" },
     { id: "about", label: "About", to: "/about" },
-    { id: "projects", label: "Projects", to: "/projects" },
     { id: "contact", label: "Contact", to: "/contact" },
+    // { id: "projects", label: "Projects", to: "/projects" },
     // { id: "community", label: "Community and ideas", to: "/community" },
   ];
 
@@ -40,11 +27,11 @@ const Navbar = () => {
     const isActive = activeNavItem === item.id;
     return (
       <Box
-        bg={isActive ? "blue.50" : "transparent"}
+        bg={isActive ? "blue.100" : "transparent"}
         px={3}
         py={2}
-        borderRadius="md"
-        _hover={{ bg: "blue.100" }}
+        borderRadius="none"
+        _hover={{ bg: "blue.300" }}
       >
         <NavLink
           to={item.to}
@@ -64,7 +51,7 @@ const Navbar = () => {
         align="center"
         justify="space-between"
         wrap="wrap"
-        bg="gray.100"
+        backgroundColor="blue.500"
         fontFamily="American Typewriter"
         px={4}
         pt={2}
@@ -98,6 +85,7 @@ const Navbar = () => {
             size="md"
             icon={<HamburgerIcon />}
             onClick={onOpen}
+            bg="transparent"
             mr={2}
           />
         )}

@@ -9,14 +9,14 @@ function DiscoverButton() {
         <Button
           bg="blue.500"
           color="white"
-          fontFamily="Capy"
-          fontSize="3xl"
+          fontFamily="American Typewriter"
+          fontSize="lg"
           boxShadow="0 0 16px rgba(0, 0, 0, 0.2)"
           animation="pulse 4.2s ease-in-out infinite"
           transformOrigin="center"
           borderRadius="none"
           _hover={{ 
-            bg: "red.600", 
+            bg: "blue.400", 
             boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.5)" 
           }}
           sx={{
