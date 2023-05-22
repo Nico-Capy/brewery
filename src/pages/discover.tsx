@@ -18,7 +18,7 @@ function Discover() {
       <Flex flexDirection='column'>
         <Flex flexDirection={{ base: "column", lg: "row", xl: "row" }} justifyContent="space-between" >
         <Box>
-        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='red.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative'>
+        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative'>
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Capy</h1>
@@ -103,7 +103,7 @@ function Discover() {
           </Box>
 
           <Box>
-          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='orange.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Chili Pepper</h1>
@@ -147,7 +147,7 @@ function Discover() {
 
         <Flex flexDirection={{ base: "column", lg: "row", xl: "row" }}>
         <Box>
-        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='yellow.400' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Sake</h1>
@@ -190,7 +190,7 @@ function Discover() {
           </Box>
 
           <Box>
-          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='purple.500' borderRadius="0rem" h={{ base: '80vh'}} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh'}} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Coffee</h1>
@@ -232,7 +232,7 @@ function Discover() {
           </Box>
 
           <Box>
-          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='green.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>California</h1>

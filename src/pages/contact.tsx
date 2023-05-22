@@ -33,8 +33,6 @@ const Contact = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // You can replace this with your own logic to send the form data to a server
-    // For demonstration purposes, we'll just log the form data to the console
     console.log(formData);
 
     toast({
@@ -49,7 +47,7 @@ const Contact = () => {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh', backgroundColor: "#76b1e8" }} >
       <form onSubmit={handleSubmit} style={{ width: '80%' }}>
         <Center>
           <Text fontFamily="American Typewriter" fontSize="6xl" p='1rem' pb='0'>
@@ -69,7 +67,7 @@ const Contact = () => {
             <FormLabel>Message</FormLabel>
             <Textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="You get extra credit if the message is a compliment" required title="Please enter a message" />
           </FormControl>
-          <Button type="submit" colorScheme="blue">
+          <Button type="submit" colorScheme="blue" borderRadius={0}>
             Send
           </Button>
         </VStack>
