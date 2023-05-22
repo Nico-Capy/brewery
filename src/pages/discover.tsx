@@ -1,5 +1,8 @@
 import { Box, Center, Flex, Text } from "@chakra-ui/react";
-import capyImage from '/triangleformation.jpg'
+import capyImage from '/triangleformation.jpg';
+import chillyBeer from "/chilipepper.jpg";
+import sakeBeer from '/sake.jpg'
+import coffeeBeer from "/coffee.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
@@ -15,11 +18,11 @@ function Discover() {
       <Flex flexDirection='column'>
         <Flex flexDirection={{ base: "column", lg: "row", xl: "row" }} justifyContent="space-between" >
         <Box>
-        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='red.600' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative'>
+        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='red.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative'>
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Capy</h1>
-                <Box p="1rem">
+                <Box p="1rem" h={60}>
                   <img src={capyImage} alt="Capy Beer" />
                 </Box>
               </Text>
@@ -47,7 +50,7 @@ function Discover() {
                 <Box>
                   <FontAwesomeIcon icon={faStar} color="white" />
                 </Box>
-                <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }}>
+                <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }}>
                   <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
                     This is the second beer recipe that I created and brewed myself. The recipe was a much bigger success than anticipated, so I kept brewing and perfecting it. Why is it called "Capy"? The first time I had people tried it, it was with friends from my scouts unit. We were at a post-camp barbecue, and I brought a few bottles. The scouts loved it and they started calling it "Capy", from my totem "Capybara". Since I hadn't named the beer yet, that stuck around.
                   </Text>
@@ -58,12 +61,12 @@ function Discover() {
           </Box>
 
           <Box>
-          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Mjolnbeer</h1>
                 <Box p="1rem">
-                  <img src={capyImage} alt="Capy Beer" />
+                  <img src={capyImage} alt="Capy Beer" height={60} />
                 </Box>
               </Text>
             </Center>
@@ -91,7 +94,7 @@ function Discover() {
                 </Box>
               </Flex>
             </Text>
-            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }}>
+            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }}>
               <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
                 This one is made with a Norwegian kveik yeast. Word on the street is, the vikings used it to brew the beer they drank at funerals. Fermenting a beer at high temperatures (between 30 an 40°C instead of the usual room temperature), that made the beer ferment in three days instead of the average two weeks. The beer would be ready for the funeral ceremony.
               </Text>
@@ -100,12 +103,12 @@ function Discover() {
           </Box>
 
           <Box>
-          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='orange.600' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='orange.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Chili Pepper</h1>
-                <Box p="1rem">
-                  <img src={capyImage} alt="Capy Beer" />
+                <Box p="1rem" h={60}>
+                  <img src={chillyBeer} alt="Chilly Pepper Beer" />
                 </Box>
               </Text>
             </Center>
@@ -133,7 +136,7 @@ function Discover() {
                 </Box>
               </Flex>
             </Text>
-            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }} display="flex" justifyContent="center" alignItems="center" >
+            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }} display="flex" justifyContent="center" alignItems="center" >
               <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
                 It's not as spicy as you may think. It's sweet, with notes of honey and bubblegum.
               </Text>
@@ -144,12 +147,12 @@ function Discover() {
 
         <Flex flexDirection={{ base: "column", lg: "row", xl: "row" }}>
         <Box>
-        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='yellow.400' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='yellow.400' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Sake</h1>
-                <Box p="1rem">
-                  <img src={capyImage} alt="Capy Beer" />
+                <Box p="1rem" h={60}>
+                  <img src={sakeBeer} alt="Sake Beer" />
                 </Box>
               </Text>
             </Center>
@@ -176,7 +179,7 @@ function Discover() {
                 <Box>
                   <FontAwesomeIcon icon={faStar} color="white" />
                 </Box>
-                <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }} >
+                <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }} >
                   <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
                     I had fun with this one. After having brewed a couple of times, I got a little bored. While I was looking through the ingredients I needed to buy for my other beers, I found a sake yeast. One thing led to another, I was making my own sake that I fermented with my own beer. The result? A unique umami beer.
                   </Text>
@@ -187,12 +190,12 @@ function Discover() {
           </Box>
 
           <Box>
-          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='purple.400' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='purple.500' borderRadius="0rem" h={{ base: '80vh'}} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Coffee</h1>
-                <Box p="1rem">
-                  <img src={capyImage} alt="Capy Beer" />
+                <Box p="1rem" w={60}>
+                  <img src={coffeeBeer} alt="Coffee Beer" />
                 </Box>
               </Text>
             </Center>
@@ -220,7 +223,7 @@ function Discover() {
                 </Box>
               </Flex>
             </Text>
-            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }}>
+            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }}>
               <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
                 Coffee beer is the first beer I brewed with in mind the idea of making a beer to pair with some food. For this one, I went for a beer you could have with dessert. I chose some malt that had npotes of chocolate and coffee. Then I went to the market where I usually buy my coffee, and went for a coffee that also had notes of chocolate.
               </Text>
@@ -229,11 +232,11 @@ function Discover() {
           </Box>
 
           <Box>
-          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='green.600' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='green.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
-                <h1>The Beer of the People</h1>
-                <Box p="1rem">
+                <h1>California</h1>
+                <Box p="1rem" h={60}>
                   <img src={capyImage} alt="Capy Beer" />
                 </Box>
               </Text>
@@ -263,7 +266,7 @@ function Discover() {
               </Flex>
             </Text>
             <Box>
-            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '76vh', lg: '76vh', xl: '76vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }}>
+            <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }}>
               <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
                 Having a pilsner in your selection of beers is always a good idea. Except it's a little annoying to make; it has to ferment at cooler temperatures than an ale, so you need a lot of equipment, and it can get quite expensive. California had a brilliant solution for that: the California Common style yeast. The warm weather made it hard for the Californian brewers to brew a lager at lower temperatures.
               </Text>
