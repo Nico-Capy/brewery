@@ -1,15 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Button,
-  Center,
-  FormControl,
-  FormLabel,
-  Input,
-  Textarea,
-  Text,
-  VStack,
-  useToast,
-} from '@chakra-ui/react';
+import { Button, Center, FormControl, FormLabel, Input, Textarea, Text, VStack, useToast, } from '@chakra-ui/react';
 
 interface FormData {
   name: string;
