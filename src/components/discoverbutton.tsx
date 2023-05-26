@@ -7,7 +7,8 @@ function DiscoverButton() {
     <Box>
       <Link to="/Discover">
         <Button
-          bg="blue.500"
+          bg="red.800"
+          m="6"
           color="white"
           fontFamily="American Typewriter"
           fontSize="lg"
@@ -16,8 +17,9 @@ function DiscoverButton() {
           transformOrigin="center"
           borderRadius="none"
           _hover={{ 
-            bg: "blue.400", 
-            boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.5)" 
+            bg: "red.600", 
+            boxShadow: "inset 0 0 10px rgba(0, 0, 0, 0.5)" ,
+            color: "white"
           }}
           sx={{
             '@keyframes pulse': {
@@ -27,7 +29,7 @@ function DiscoverButton() {
               },
               '50%': {
                 boxShadow: '0 0 20px rgba(0, 0, 0, 0.3)',
-                transform: 'scale(1.1)',
+                transform: 'scale(0.9)',
               },
               '100%': {
                 boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',

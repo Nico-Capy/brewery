@@ -27,16 +27,17 @@ const Navbar = () => {
     const isActive = activeNavItem === item.id;
     return (
       <Box
-        bg={isActive ? "blue.100" : "transparent"}
+        bg={"transparent"}
         px={3}
         py={2}
         borderRadius="none"
-        _hover={{ bg: "blue.300" }}
+        fontFamily="American Typewriter"
+        _hover={{ bg: "red.600", color: "white" }}
       >
         <NavLink
           to={item.to}
           onClick={() => handleNavItemOnClick(item.id)}
-          color={isActive ? "blue.500" : "inherit"}
+          color={isActive ? "red.600" : "inherit"}
         >
           {item.label}
         </NavLink>
@@ -51,7 +52,7 @@ const Navbar = () => {
         align="center"
         justify="space-between"
         wrap="wrap"
-        backgroundColor="blue.500"
+        backgroundColor="transparent"
         fontFamily="American Typewriter"
         px={4}
         pt={2}
@@ -95,7 +96,7 @@ const Navbar = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Menu</DrawerHeader>
+          <DrawerHeader fontFamily="American Typewriter">Menu</DrawerHeader>
           <DrawerBody>
             <Stack spacing={4}>
               {navItems.map((item) => (

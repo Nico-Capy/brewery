@@ -1,14 +1,12 @@
 import { Box, Center, Flex, Text } from "@chakra-ui/react";
 import capyImage from '/triangleformation.jpg';
-import chillyBeer from "/chilipepper.jpg";
-import sakeBeer from '/sake.jpg'
-import coffeeBeer from "/coffee.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import backgroundBeer from "/alignedbeers.jpg";
 
 function Discover() {
   return (
-    <Box backgroundColor="blue.300">
+    <Box backgroundImage={`url(${backgroundBeer})`} backgroundSize="cover">
       <Center>
       <Text fontFamily="American Typewriter" fontSize="5xl" p='1rem' textColor='white'>
         <h1>Discover</h1>
@@ -18,7 +16,7 @@ function Discover() {
       <Flex flexDirection='column'>
         <Flex flexDirection={{ base: "column", lg: "row", xl: "row" }} justifyContent="space-between" >
         <Box>
-        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative'>
+        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='red.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative'>
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Capy</h1>
@@ -61,7 +59,7 @@ function Discover() {
           </Box>
 
           <Box>
-          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='red.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Mjolnbeer</h1>
@@ -96,19 +94,19 @@ function Discover() {
             </Text>
             <Box m='0' mt='0' boxShadow="2xl" backgroundColor='transparent' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='absolute' top='0' left='0' opacity='0' display="flex" justifyContent="center" alignItems="center" _hover={{ opacity: "1", bg: "rgba(0,0,0,0.6)", transition: "opacity 1.6s" }}>
               <Text fontFamily='American Typewriter' mx='auto' my="auto" p="4" textColor='white' fontSize="xl" textAlign="center">
-                This one is made with a Norwegian kveik yeast. Word on the street is, the vikings used it to brew the beer they drank at funerals. Fermenting a beer at high temperatures (between 30 an 40°C instead of the usual room temperature), that made the beer ferment in three days instead of the average two weeks. The beer would be ready for the funeral ceremony.
+              This one is made with a Norwegian kveik yeast. Word on the street is, the vikings used it to brew the beer they drank at funerals. Fermenting a beer at high temperatures (between 30 an 40°C instead of the usual room temperature), that made the beer ferment in three days instead of the average two weeks. The beer would be ready for the funeral ceremony.
               </Text>
             </Box>
           </Box>
           </Box>
 
           <Box>
-          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='red.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Chili Pepper</h1>
                 <Box p="1rem" h={60}>
-                  <img src={chillyBeer} alt="Chilly Pepper Beer" />
+                  <img src={capyImage} alt="Chilly Pepper Beer" />
                 </Box>
               </Text>
             </Center>
@@ -147,12 +145,12 @@ function Discover() {
 
         <Flex flexDirection={{ base: "column", lg: "row", xl: "row" }}>
         <Box>
-        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+        <Box m='6' mt='0' boxShadow="2xl" backgroundColor='red.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Sake</h1>
                 <Box p="1rem" h={60}>
-                  <img src={sakeBeer} alt="Sake Beer" />
+                  <img src={capyImage} alt="Sake Beer" />
                 </Box>
               </Text>
             </Center>
@@ -190,12 +188,12 @@ function Discover() {
           </Box>
 
           <Box>
-          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh'}} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='red.600' borderRadius="0rem" h={{ base: '80vh'}} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>Coffee</h1>
-                <Box p="1rem" w={60}>
-                  <img src={coffeeBeer} alt="Coffee Beer" />
+                <Box p="1rem" h={60}>
+                  <img src={capyImage} alt="Coffee Beer" />
                 </Box>
               </Text>
             </Center>
@@ -232,12 +230,12 @@ function Discover() {
           </Box>
 
           <Box>
-          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='blue.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
+          <Box m='6' mt='0' boxShadow="2xl" backgroundColor='red.600' borderRadius="0rem" h={{ base: '80vh' }} w={{ base: '90vw', sm: '90vw', md: '90vw', lg: '26vw', xl: '26vw' }} position='relative' >
             <Center>
               <Text fontFamily="American Typewriter" fontSize="2xl" color="white" textAlign="center" p='1rem'>
                 <h1>California</h1>
                 <Box p="1rem" h={60}>
-                  <img src={capyImage} alt="Capy Beer" />
+                  <img src={capyImage} alt="California Common Beer" />
                 </Box>
               </Text>
             </Center>

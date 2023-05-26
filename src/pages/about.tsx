@@ -44,8 +44,7 @@ const AboutPage: React.FC = () => {
       p="2"
       alignItems="center"
       justifyContent="center"
-      backgroundColor="blue.300"
-      boxShadow='inner'
+      backgroundColor="transparent"
     >
       <Flex
         flexDir={isImageOnLeft ? 'row' : 'column'}
@@ -78,6 +77,7 @@ const AboutPage: React.FC = () => {
         <Text
           textAlign="justify"
           fontSize="md"
+          fontFamily="American Typewriter"
           m="10"
           mt={isImageOnLeft ? '6' : '10'}
           mb={isImageOnLeft ? '6' : '10'}
@@ -88,7 +88,7 @@ const AboutPage: React.FC = () => {
           I like beer. I like it so much, I started making it myself. Why call my brewery "Not A Brewery"? Well, I'm still only doing this for fun. As a friend once said, "Nico, I'd see you go to jail for selling alcohol during the prohibition". Spot on!
           <br />
           <br />
-          As long as I'm having fun, why not make a website for my brewery? So here we are! Feel free to roam around, take a look at the beers I make, leave a comment, look at the more creative projects I'm doing, … You can even send me ideas! You never know when I'll run out of weird stuff to do. The weird idea to beat: a bacon and maple syrup beer.
+          As long as I'm having fun, why not make a website for my brewery? So here we are! Feel free to roam around, and take a look at the beers I make. You can even send me ideas! You never know when I'll run out of weird stuff to do. The weird idea to beat: a bacon and maple syrup beer.
         </Text>
       </Flex>
     </Flex>
